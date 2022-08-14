@@ -1,0 +1,18 @@
+h3{
+    color: var(--inactive-text);
+}
+.top-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 3rem;
+    width: 100%;
+    box-shadow: var(--collection-shadow) ;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+Button .button-space{
+    margin-left: 10px;
+    box-shadow: var(--primary-box-shadow);
+}

@@ -1,0 +1,15 @@
+.searchbar{
+    outline: 1px solid gray;
+    width: 40%;
+    border-radius: 20px;
+    justify-content: flex-start;
+    height: 2rem;
+}
+#search{
+    outline: none;
+    border: none;
+    width: 98%;
+    height: 1rem;
+    margin-left: 5px;
+    border-radius: 5px;
+}
