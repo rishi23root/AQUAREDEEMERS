@@ -1,0 +1,54 @@
+.container-box{
+    display: flex;
+    flex-direction: row;
+}
+.leftside .overlap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 58rem;
+    font-size: 70px;
+    background-color: black;
+}
+
+.leftside{
+    width: 30%;
+    height: 100%;
+    border-right: 2px solid gray;
+}
+
+.login-image{
+    height: 100vh;
+    width: 30%;
+    filter: grayscale(70%);
+    position: absolute;
+}
+
+.rightcontainer{
+    padding-left: 10%;
+}
+
+
+.inactive-color{
+    color: var(--inactive-text);
+}
+
+.textfield-size{
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+@media(min-width :0px) and (max-width:600px){
+    .rightcontainer{
+        width: 100%;
+    }
+    .leftside{
+        width: 0;
+    }
+    .login-image{
+        width: 0;
+    }
+    .overlap{
+        transform: translateX(-40px);
+    }
+}
