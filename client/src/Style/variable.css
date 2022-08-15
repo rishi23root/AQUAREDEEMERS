@@ -1,0 +1,13 @@
+#root{
+    --primary-box-shadow:rgb(28 28 28 / 8%) 0px 2px 8px;
+    --border-white: rgb(232, 232 ,232);
+    --primary-bg: rgb(255 ,255 ,255);
+    --button-gray: #828282;
+    --delivery-red: #ff7e8b;
+    --gray:rgb(207,207,207);
+    --inactive-text:#8a8787;
+    --inactive-color: #f8f8f8;
+    --filter-text:#9c9c9c;
+    --heading-text: #0b0b0b;
+    --collection-shadow: rgb(0 0 0 /8%) 0px 3px 10px;
+}
