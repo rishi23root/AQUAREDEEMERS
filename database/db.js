@@ -44,12 +44,12 @@ const userSchema = mongoose.Schema({
 
         
 const testSchema = mongoose.Schema({
+    // ftir
     _id: mongoose.Schema.ObjectId,
     description: {
         type: String,
         required: true
     },
-
     testDate: {
         type: Date,
         required: true

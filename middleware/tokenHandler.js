@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken')
 var CryptoJS = require("crypto-js");
 const secret = process.env.JWT_SECRET || "Testing"
-const { ErrorConstructor } = require('../middleware/errorHandler')
+const { ErrorConstructor } = require('./errorHandler')
 
 const keyForMessageCypher = process.env.MESSAGECYPHER || "Testing"
 
