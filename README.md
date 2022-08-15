@@ -60,3 +60,9 @@
     * [ ] make function for handling request and save response in redux store
 
 
+* [ ] setup scripts 
+    * [ ] to build and run
+    * [ ] to run in test 
+    * [ ] to run in production
+     
+
