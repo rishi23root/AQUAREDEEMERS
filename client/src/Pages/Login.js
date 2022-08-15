@@ -19,7 +19,7 @@ const Login = () => {
                     <Typography variant='h4' className='inactive-color' sx={{mb:4 }}> Let's   log you in quickly</Typography>
                     <TextField className='textfield-size' label="Enter your Email" sx={{mb:2,}} />
                     <TextField className='textfield-size' label="Enter your Password" sx={{mb:2,}}/>
-                    <Box display="flex" flexDirection={"rows"} justifyContent="space-between" width={"80%"}>
+                    <Box display="flex" flexDirection={"rows"} justifyContent="space-between" width={"80%"} className="content-flex-row" sx={{mb:2, mt:2}} >
                         <Button variant='contained' size='large' >LOGIN</Button>
                         <Typography fontWeight="bold" >don't have an account? </Typography>
                     </Box>
