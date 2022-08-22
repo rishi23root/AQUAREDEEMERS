@@ -1,0 +1,12 @@
+div#tab {
+  width: 100vh;
+  margin-top: 5%;
+}
+button.btn.btn-info {
+  background: purple;
+  color: white;
+  border: none;
+  width: 5rem;
+  height: 2rem;
+  cursor: pointer;
+}

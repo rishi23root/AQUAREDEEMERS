@@ -1,27 +1,25 @@
 .container-box{
     display: flex;
     flex-direction: row;
+    z-index: -2;
 }
-.leftside .overlap{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 58rem;
+.leftside .overlap-text{
+    margin-top: 60%;
+    margin-left: 25%;
     font-size: 70px;
-    background-color: black;
+    color: white;
 }
 
 .leftside{
     width: 30%;
-    height: 100%;
-    border-right: 2px solid gray;
 }
 
-.login-image{
-    height: 100vh;
+.leftside .signup-image{
     width: 30%;
-    filter: grayscale(70%);
+    height: 100vh;
     position: absolute;
+    filter: blur(3px);
+    z-index: -1;
 }
 
 .rightcontainer{
@@ -38,17 +36,12 @@
     border-radius: 10px;
 }
 
-@media(min-width :0px) and (max-width:600px){
+@media(min-width :0px) and (max-width:800px){
     .rightcontainer{
         width: 100%;
     }
     .leftside{
         width: 0;
-    }
-    .login-image{
-        width: 0;
-    }
-    .overlap{
-        transform: translateX(-40px);
+        display: none;
     }
 }

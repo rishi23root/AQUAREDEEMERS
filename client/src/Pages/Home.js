@@ -1,15 +1,30 @@
 import React from 'react'
-import Navbar from '../Components/Navbar';
+
+
+
 import "../Style/variable.css";
 import "../Style/commonclasses.css";
-import Maps from '../Components/Maps';
 
-function Home() {
+import "./Home.css";  
+import Maps from '../Components/Maps';
+import Navbar from '../Components/Navbar';
+import Middlepart from '../Components/Middlepart';
+
+
+
+function Home() {  
+
+
+
   return (
-    <div>
+  <div  className='background' >
+    <div className='nav-section'>
         <Navbar/> 
         <Maps/>
     </div>
+    <Middlepart/>
+      
+  </div>
   )
 }
 
