@@ -1,5 +1,5 @@
 h3{
-    color: var(--inactive-text);
+    color: white;
 }
 .top-navbar{
     display: flex;
@@ -10,9 +10,12 @@ h3{
     width: 100%;
     box-shadow: var(--collection-shadow) ;
     padding: 1rem;
-    margin-bottom: 2rem;
+    position: absolute;
+    background-color: rgba(77, 74, 74, 0.5);
+    
 }
 Button .button-space{
     margin-left: 10px;
     box-shadow: var(--primary-box-shadow);
+    color: white;
 }

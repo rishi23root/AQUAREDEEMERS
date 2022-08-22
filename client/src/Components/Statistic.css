@@ -1,0 +1,28 @@
+ .middlePart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.statistic-leftSide {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: "left";
+    color: white;
+}
+.Statistic-rightSide{
+    display: flex;
+    flex-direction: column;
+}
+div#small-tab{
+    width: 50vh;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    margin-left: 15rem;
+}
+.rightSide{
+    width: 30%;
+    margin-right: 15rem;
+}

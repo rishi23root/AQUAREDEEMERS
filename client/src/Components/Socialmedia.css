@@ -1,0 +1,16 @@
+.social-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 7rem;
+    height: 5rem;
+    background-color: rgb(67, 156, 156);
+    border-radius: 10px;
+    margin: 15px;
+    color: white;
+}

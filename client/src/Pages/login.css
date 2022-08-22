@@ -1,15 +1,16 @@
 .container-box{
     display: flex;
     flex-direction: row;
+    z-index: -2;
 }
 .leftside .overlap{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 58rem;
-    font-size: 70px;
-    background-color: black;
+    height: 100vh;
+    font-size: 90px;
     color: white;
+    background: rgba(68, 68, 68, 0.5);
 }
 
 
@@ -21,8 +22,8 @@
 .login-image{
     height: 100vh;
     width: 30%;
-    filter: grayscale(50%);
     position: absolute;
+    z-index: -1;
 }
 
 
@@ -40,19 +41,17 @@
     border-radius: 10px;
 
 }
-@media(min-width :0px) and (max-width:600px){
+@media(min-width :0px) and (max-width:800px){
     .rightcontainer{
         width: 100%;
+        display: flex;
+        flex-direction: column;
     }
     .leftside{
         width: 0;
+        display: none;
     }
-    .login-image{
-        width: 0;
-    }
-    .overlap{
-        transform: translateX(-50px);
-    }
+ 
     .content-flex-row{
         display: flex;
         flex-direction: column;

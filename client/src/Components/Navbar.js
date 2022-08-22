@@ -10,11 +10,11 @@ import { Button } from '@mui/material';
 const Navbar= () => {
   return (
     <div className='top-navbar container'>
-        <div className='logoname absolute-center'> 
-            <h3> Aquaredeemers</h3>
+        <div className='logoname absolute-center cur-po'> 
+            <h3> AQUAREDEEMERS</h3>
         </div>
         <div className='cur-po absolute-center space-button '>
-            <Button variant='outlined'  className='button-space'>Logout</Button>
+            <Button src="../../login"  className='button-space' style={{color:"white"}} >Logout | Signup</Button>
         </div>
 
     </div>

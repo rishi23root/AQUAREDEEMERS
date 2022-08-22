@@ -1,13 +1,17 @@
 import React from 'react';
 import "./Maps.css";
 
+
+
 import SearchSharpIcon from '@mui/icons-material/SearchSharp';
+
+
 
 const Maps = () => {
   return (
-    <div className='absolute-center vertical-align'>
+    <div className='absolute-center vertical-align map-height'>
         <div>
-            maps
+            maps api use here
         </div>  
         <div className='searchbar absolute-center'>
             <SearchSharpIcon className='search-position'/>
