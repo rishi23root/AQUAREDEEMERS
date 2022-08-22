@@ -9,27 +9,25 @@
     height: 58rem;
     font-size: 70px;
     background-color: black;
-    color: white;
 }
 
-
 .leftside{
-    width: 40%;
+    width: 30%;
     height: 100%;
+    border-right: 2px solid gray;
 }
 
 .login-image{
     height: 100vh;
     width: 30%;
-    filter: grayscale(50%);
+    filter: grayscale(70%);
     position: absolute;
 }
 
-
 .rightcontainer{
-    width: 60%;
-    margin-top: 10%;
+    padding-left: 10%;
 }
+
 
 .inactive-color{
     color: var(--inactive-text);
@@ -38,8 +36,8 @@
 .textfield-size{
     max-width: 80%;
     border-radius: 10px;
-
 }
+
 @media(min-width :0px) and (max-width:600px){
     .rightcontainer{
         width: 100%;
@@ -51,10 +49,6 @@
         width: 0;
     }
     .overlap{
-        transform: translateX(-50px);
-    }
-    .content-flex-row{
-        display: flex;
-        flex-direction: column;
+        transform: translateX(-40px);
     }
 }
