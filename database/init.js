@@ -16,7 +16,7 @@ const userSchema = mongoose.Schema({
         type: String,
         validate: [
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-            'email can not varify, try something'
+            'email can not verify, try something else'
         ],
         required: true
     },
@@ -42,23 +42,46 @@ const userSchema = mongoose.Schema({
     },
 }, { timestamps: true })
 
-        
+
+const sampleVenueSchema = mongoose.Schema({
+    address: {
+        type: String,
+        required: true
+    },
+    latitute: {
+        type: Number,
+        required: true
+    },
+    longitude: {
+        type: Number,
+        required: true
+    }
+})
+
 const testSchema = mongoose.Schema({
     // ftir
     _id: mongoose.Schema.ObjectId,
-    description: {
+    testNameStr: {
         type: String,
-        required: true
+        required: true,
     },
     testDate: {
         type: Date,
         required: true
     },
-    sampleVenue: {
+    sampleVenue: [sampleVenueSchema],
+
+    reservoirType: {
         type: String,
         required: true
     },
 
+    reservoirAvgCapacity: {
+        type: Number,
+        required: true
+    }, // default in L
+
+    // outputs from the program
     resultStatus: {type: String},
     resultBool: {type: String},
     resultDate: {type: Date},
@@ -66,17 +89,21 @@ const testSchema = mongoose.Schema({
 
 }, { timestamps: true })
 
+// flteration processes
 
 
 // connect to the database
 const connectionParams = {
     useNewUrlParser: true,
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
+    // useUnifiedTopology: true,
+    // useFindAndModify: false
 };
 
-mongoose.connect(process.env.DB, connectionParams)
+const ConnectionURI = `mongodb+srv://${process.env.DBURIANDPASS}@rishabhdatabase-7ayur.mongodb.net/${process.env.DBName}?authSource=admin&replicaSet=rishabhDatabase-shard-0&w=maj&readPreference=primary&retryWrites=true&ssl=true`
+// `mongodb+srv://${process.env.DBURIANDPASS}-7ayur.mongodb.net/socialHACK?retryWrites=true&w=majority`
+
+mongoose.connect(ConnectionURI, connectionParams)
     .then(_ => {
         console.log("Connected to database successfully 😎");
     })
@@ -85,7 +112,7 @@ mongoose.connect(process.env.DB, connectionParams)
         console.error(err);
     })
 
-
+    
     
 mongoose.model(DBname.user, userSchema)
 mongoose.model(DBname.test, testSchema)

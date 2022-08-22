@@ -6,23 +6,28 @@
 
 * [ ] server setup
 
-  * [ ] create a server
-  * [ ] setup linter
-  * [ ] setup express
-  * [ ] add dependencies
+  * [x] create a server
+  * [x] setup linter
+  * [x] setup express
+  * [x] add dependencies
 
   * [ ] setup middleware
 
-    * [ ] setup cors
-    * [ ] setup body parser
-    * [ ] setup mongoose
-    * [ ] setup helmet
+    * [x] setup cors
+    <!-- * [ ] setup body parser -->
+    * [x] setup mongoose
+    * [x] setup helmet
     * [ ] setup compression
-    * [ ] setup cookie parser
+    * [x] setup cookie parser
     * [ ] setup session for session cookies || or create a extract class for the same using filesystem instead of memory or use mongoose for the same
     * [ ] setup passport
 
   * [ ] setup database
+    * [ ] connect database
+    * [ ] create schema
+    * [ ] create model
+    * [ ] create low level fucntioin to extract and save data to database
+
   * [ ] setup model for the database
 
   * [ ] setup middleware
@@ -52,6 +57,7 @@
 
 * [ ] client setup
     * [ ] react setup
+    * [ ] setup linter
     * [ ] setup package file for ease
     * [ ] setup react router
     * [ ] setup redux
@@ -64,5 +70,5 @@
     * [ ] to build and run
     * [ ] to run in test 
     * [ ] to run in production
-     
+
 

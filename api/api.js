@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { errorHandler, ErrorConstructor } = require('../middleware/errorHandler')
-const { TokenHandler } = require('../api/tokenHandler');
+const { TokenHandler } = require('../middleware/tokenHandler');
 
 // user uui is unique
 

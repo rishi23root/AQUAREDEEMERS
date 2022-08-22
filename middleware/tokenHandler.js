@@ -59,13 +59,13 @@ const TokenHandler = (req, res, next) => {
 const getToken = (authField) => {
     if (typeof authField === 'object') {
         return jwt.sign({
-            message: 'so you parse token, that is nice, but why thought',
+            message: 'so you parse token, that is nice, but why tho',
             ...authField,
         }, secret);
     } else {
         return jwt.sign({
             data: authField,
-            message: 'so you parse token, that is nice, but why thought'
+            message: 'so you parse token, that is nice, but why tho'
         }, secret);
     }
 }

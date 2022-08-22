@@ -1,21 +1,85 @@
-require('dotenv').config();
-
-    const express = require('express');
+const express = require('express');
 const path = require ("path")
+const fs = require ("fs")
 const app = express();
 const cors = require("cors");
-const connection = require("./database/db");
+const helmet = require("helmet");
+var cookieParser = require('cookie-parser')
+const { errorHandler, ErrorConstructor } = require('./middleware/errorHandler')
+require('dotenv').config();
 
-
+const port = process.env.PORT || 3000;
 
 //database connection
-connection();
+require('./database/init');
 
+// ############ middlewares ################
 
+// for prduction and access
+if (process.env.NODE_ENV != 'development')
+    app.use(helmet.contentSecurityPolicy()); // uncomment in final version
+app.use(helmet.crossOriginEmbedderPolicy());
+app.use(helmet.crossOriginOpenerPolicy());
+app.use(helmet.crossOriginResourcePolicy());
+app.use(helmet.dnsPrefetchControl());
+app.use(helmet.expectCt());
+app.use(helmet.frameguard());
+app.use(helmet.hidePoweredBy());
+app.use(helmet.hsts());
+app.use(helmet.ieNoOpen());
+app.use(helmet.noSniff());
+app.use(helmet.originAgentCluster());
+app.use(helmet.permittedCrossDomainPolicies());
+app.use(helmet.referrerPolicy());
+app.use(helmet.xssFilter());
 
-//middlewares
 app.use(express.json())
-app.use(cors());
+app.use(cookieParser());
 
-const port = process.env.PORT || 8080;
-app.listen(port,() => console.log(`Listening on port ${port}...`))
+
+// set it up for production and development sepereately
+if (process.env.NODE_ENV == 'development'){
+    app.use(cors());
+} else{
+    // production
+    // check if all subdomains are allowed or not
+    app.use(cors({
+        origin: '*.' + process.env.siteURL
+    }));
+}
+
+// ############ ############ ################
+
+
+
+
+// just for testing 
+if (process.env.NODE_ENV == 'development') {
+    app.use((req, res, next) => {
+        console.log("url - ", req.url, "\tIp -", req.ip)
+        next()
+    });
+}
+
+app.use("/api/", require("./api/api"));
+
+
+
+
+// if in the production 
+if (process.env.NODE_ENV == "production") {
+    app.use(express.static('client/build'))
+    app.get("/*", (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    })
+}else{
+    app.get("/*", (req, res) => {
+        res.send(
+            "server in developer mode run react on seperately"
+        )
+    })
+}
+
+app.listen(port, () => {
+    console.log(`server is listening on http://localhost:${port}`)
+})
