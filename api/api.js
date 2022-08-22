@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const { errorHandler, ErrorConstructor } = require('../middleware/errorHandler')
 const { TokenHandler } = require('../middleware/tokenHandler');
+const DBname = require('../database/init');
+console.log(DBname)
 
 // user uui is unique
 

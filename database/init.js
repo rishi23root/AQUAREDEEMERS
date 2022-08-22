@@ -4,6 +4,7 @@ require('dotenv').config()
 const DBname = {
     user: 'User',
     test: 'testingSample',
+    filters: 'filterSchema',
 }
 
 // defining the schema
@@ -82,20 +83,37 @@ const testSchema = mongoose.Schema({
     }, // default in L
 
     // outputs from the program
-    resultStatus: {type: String},
-    resultBool: {type: String},
-    resultDate: {type: Date},
-    resultDescription: {type: String},
+    resultStatus: { type: String },
+    resultBool: { type: String },
+    resultDate: { type: Date },
+    resultDescription: { type: String },
 
 }, { timestamps: true })
 
 // flteration processes
-// removal techniques
-// contamination type
-// abbreviation of the chemical names
-// efficiency of removal technique
-// discription
-// literatures
+const filtersSchema = mongoose.Schema({
+    _id: mongoose.Schema.ObjectId,
+    filterTechniques: {
+        type: String,
+        required: true,
+    },
+    contaminationType: [{
+        type: String,
+    }],
+    abbreviationOfTheChemicalNames: [{
+        type: String,
+    }],
+    efficiencyOfRemovalTechnique: {
+        type: Number,
+    },
+    discription: {
+        type: String,
+    },
+    literatures: {
+        type: String,
+    }
+}, { timestamps: true })
+
 
 // connect to the database
 const connectionParams = {
@@ -117,9 +135,11 @@ mongoose.connect(ConnectionURI, connectionParams)
         console.error(err);
     })
 
-    
-    
+
+
 mongoose.model(DBname.user, userSchema)
 mongoose.model(DBname.test, testSchema)
+mongoose.model(DBname.filters, filtersSchema)
 
+module.exports = DBname;
 
