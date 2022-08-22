@@ -2,7 +2,7 @@ import React from 'react';
 
 
 import Plot from 'react-plotly.js';
-import "./Chart.css";
+import "../Style/componets/Chart.css";
 
 
 const Chart = () => {

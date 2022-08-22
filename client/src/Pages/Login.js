@@ -1,6 +1,6 @@
 import { Box, Button, Link, TextField, Typography } from '@mui/material';
 import React from 'react';
-import "./login.css";
+import "../Style/pagee/login.css";
 
 import LoginImage from "../assets/images/login-image.jpg";
 

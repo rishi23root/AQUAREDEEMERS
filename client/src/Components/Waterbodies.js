@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import  axios  from 'axios';
 import DataTable, { createTheme }  from "react-data-table-component";
-import "./Waterbodies.css";
+import "../Style/componets/Waterbodies.css";
 
 
 

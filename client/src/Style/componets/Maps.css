@@ -1,19 +1,7 @@
-.searchbar{
-    outline: 1px solid gray;
-    width: 40%;
-    border-radius: 20px;
-    justify-content: flex-start;
-    height: 2rem;
+.map-style{
+    width: 100%;
 }
-#search{
-    outline: none;
-    border: none;
-    width: 98%;
-    height: 1rem;
-    margin-left: 5px;
-    border-radius: 5px;
-}
-.map-height{
-    background-color: lightblue;
-    height: 30vh;
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-attrib-inner{
+    display: none;
 }

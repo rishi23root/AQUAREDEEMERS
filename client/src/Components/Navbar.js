@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Navbar.css";
+import "../Style/componets/Navbar.css";
 
 
 
@@ -11,7 +11,7 @@ const Navbar= () => {
   return (
     <div className='top-navbar container'>
         <div className='logoname absolute-center cur-po'> 
-            <h3> AQUAREDEEMERS</h3>
+            <h4> AQUAREDEEMERS</h4>
         </div>
         <div className='cur-po absolute-center space-button '>
             <Button src="../../login"  className='button-space' style={{color:"white"}} >Logout | Signup</Button>
