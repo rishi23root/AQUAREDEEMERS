@@ -90,7 +90,12 @@ const testSchema = mongoose.Schema({
 }, { timestamps: true })
 
 // flteration processes
-
+// removal techniques
+// contamination type
+// abbreviation of the chemical names
+// efficiency of removal technique
+// discription
+// literatures
 
 // connect to the database
 const connectionParams = {
