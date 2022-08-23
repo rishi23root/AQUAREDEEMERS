@@ -1,4 +1,4 @@
-h3{
+h4{
     color: white;
 }
 .top-navbar{
@@ -10,12 +10,11 @@ h3{
     width: 100%;
     box-shadow: var(--collection-shadow) ;
     padding: 1rem;
-    position: absolute;
-    background-color: rgba(77, 74, 74, 0.5);
+    background-color: rgba(11, 12, 27, 0.23);
     
 }
-Button .button-space{
-    margin-left: 10px;
+Button.button-space{
+    margin-left: 2rem;
     box-shadow: var(--primary-box-shadow);
     color: white;
 }

@@ -2,10 +2,10 @@ import React from 'react'
 
 
 
-import "../Style/variable.css";
-import "../Style/commonclasses.css";
+import "../Style/global/variable.css";
+import "../Style/global/commonclasses.css";
 
-import "./Home.css";  
+import "../Style/pagee/Home.css";  
 import Maps from '../Components/Maps';
 import Navbar from '../Components/Navbar';
 import Middlepart from '../Components/Middlepart';
@@ -22,8 +22,9 @@ function Home() {
         <Navbar/> 
         <Maps/>
     </div>
-    <Middlepart/>
-      
+    <div className='overlay'>
+      <Middlepart/>
+    </div>
   </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import "./Socialmedia.css";
+import "../Style/componets/Socialmedia.css";
 import LanguageIcon from '@mui/icons-material/Language';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';

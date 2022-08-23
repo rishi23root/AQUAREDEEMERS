@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Second from './Second';
 
-import "./Statistic.css"
+import "../Style/componets/Statistic.css"
 import Third from './Third';
 // import Graphs from "./Graphs";
 

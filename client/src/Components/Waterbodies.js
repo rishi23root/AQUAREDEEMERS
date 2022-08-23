@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import  axios  from 'axios';
 import DataTable, { createTheme }  from "react-data-table-component";
-import "./Waterbodies.css";
+import "../Style/componets/Waterbodies.css";
 
 
 
@@ -13,7 +13,7 @@ createTheme('solarized', {
       secondary: '#2aa198',
     },
     background: {
-      default: "rgb(33, 34, 73)",
+      default: "rgb(14, 15, 35)",
     },
   }, 'dark');
 
@@ -78,67 +78,3 @@ createTheme('solarized', {
 export default Waterbodies;
 
 
-
-
-//  return (
-//           <table>
-//                 <tr>
-//                     <th>Id</th>
-//                     <th>Rank</th>
-//                     <th>Location</th>
-//                     <th>Area</th>
-//                     <th>Contamination band</th>
-//                     <th>Major contaminants</th>
-//                     <th>Improvement over the period</th>
-//                 </tr>
-//             <thead>
-//               { 
-//                 // countries && countries.length> 0 ?
-//                 countries.map((countries) =>( 
-//                 <tr > 
-//                     <td>{countries.id}</td>
-//                     <td>{countries.rank}</td>
-//                     <td>{countries.location}</td>
-//                     <td>{countries.area}</td>
-//                     <td>{countries.contamination}</td>
-//                     <td>{countries.major_contamination}</td>
-//                     <td>{countries.improvement}</td>
-//                 </tr>
-//                 )
-//                 // :"Loading"
-//     )}
-//             </thead>
-//         </table>
-                
-//     </div>
-//   )
-// }
-
-// export default Waterbodies;
-
-// import React, { useEffect, useState } from 'react'
-// import Table from "./Table";
-
-
-// import "./Waterbodies.css";
-
-
-// const Waterbodies = () => {
-
-//   const [contries, setCountries] = useState([]);
-
-//   useEffect(() => {
-//     fetch("https://extendsclass.com/jsonstorage/ea971b28c939").then
-//       (response => response.json())
-//       .then(data => {contries(data);
-//       })
-//   },[]);
-
-//   return (
-//     <div>
-//         <Table />
-//     </div>
-//   );
-// }
-
-// export default Waterbodies;

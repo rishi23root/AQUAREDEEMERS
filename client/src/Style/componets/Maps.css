@@ -1,0 +1,7 @@
+.map-style{
+    width: 100%;
+}
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-attrib-inner{
+    display: none;
+}

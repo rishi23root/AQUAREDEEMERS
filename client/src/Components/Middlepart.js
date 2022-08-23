@@ -2,7 +2,7 @@ import React from 'react'
 import Chart from './Chart'
 import Socialmedia from './Socialmedia'
 import Waterbodies from './Waterbodies'
-import "./Middlepart.css";
+import "../Style/componets/Middlepart.css";
 import { Box } from '@mui/material';
 import Statistic from './Statistic';
 
@@ -12,7 +12,7 @@ import Statistic from './Statistic';
 const Middlepart = () => {
   return (
     <div className='overall'>
-            <Box className='absolute-center' sx={{mb:5}} style={{ borderRadius:10 }} >
+            <Box className='absolute-center' sx={{mb:5 , mt:10}} style={{ borderRadius:10 }} >
               <Waterbodies/>
             </Box>
           <hr></hr>

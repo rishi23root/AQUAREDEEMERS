@@ -2,7 +2,7 @@ import React from 'react';
 
 
 import Plot from 'react-plotly.js';
-import "./Chart.css";
+import "../Style/componets/Chart.css";
 
 
 const Chart = () => {
@@ -22,7 +22,20 @@ const Chart = () => {
                     type:'scatter'
                 }
               ]}
-            layout={{width:700 , height:400, title: "Graph ", plot_bgcolor:"rgb(33, 34, 73)" }}
+            layout={{
+              width:700 ,
+              height:400, 
+              title: "Graph", 
+              plot_bgcolor:"rgb(14, 15, 35)", 
+              paper_bgcolor:"rgb(14, 15, 35)",
+            xaxis: {
+            showgrid: false,
+            zeroline: false,
+            color: "white"
+            },
+            yaxis: {
+              color: "white"
+            }, }}
         />
     </div>
    
