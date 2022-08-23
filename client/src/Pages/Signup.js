@@ -1,6 +1,6 @@
 import { Box, Button, Link, TextField, Typography } from '@mui/material';
 import React from 'react';
-import "./Signup.css";
+import "../Style/pagee/Signup.css";
 
 import SignupImage from "../assets/images/signup-image.png";
 

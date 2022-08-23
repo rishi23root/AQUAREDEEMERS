@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import  axios  from 'axios';
 import DataTable, { createTheme } from "react-data-table-component";
-import "./Waterbodies.css";
+import "../Style/componets/Waterbodies.css";
 
 
 
@@ -13,7 +13,7 @@ const Third = () => {
       secondary: '#2aa198',
     },
     background: {
-      default: "rgb(33, 34, 73)",
+      default: "rgb(14, 15, 35)",
     },
   }, 'dark');
 
