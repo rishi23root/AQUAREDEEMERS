@@ -1,15 +1,8 @@
-.background{
-    background-color: rgb(58, 59, 112);
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    flex-wrap: wrap;
-}
+
 .nav-section{
     width: 100%;
     position: absolute;
     align-items: center;
-    width: 100%;
 }
 .overlay{
     padding-top: 35rem;

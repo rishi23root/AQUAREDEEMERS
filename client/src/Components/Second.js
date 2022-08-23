@@ -26,11 +26,8 @@ const Second = () => {
           secondary: '#2aa198',
         },
         background: {
-          default: "rgb(33, 34, 73)",
-        },
-        table: {
-            width:"30vh"
-        },
+          default: "rgb(14, 15, 35)",
+        }
       }, 'dark');
 
 

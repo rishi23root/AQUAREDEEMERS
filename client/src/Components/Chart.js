@@ -22,7 +22,20 @@ const Chart = () => {
                     type:'scatter'
                 }
               ]}
-            layout={{width:700 , height:400, title: "Graph ", plot_bgcolor:"rgb(33, 34, 73)" }}
+            layout={{
+              width:700 ,
+              height:400, 
+              title: "Graph", 
+              plot_bgcolor:"rgb(14, 15, 35)", 
+              paper_bgcolor:"rgb(14, 15, 35)",
+            xaxis: {
+            showgrid: false,
+            zeroline: false,
+            color: "white"
+            },
+            yaxis: {
+              color: "white"
+            }, }}
         />
     </div>
    

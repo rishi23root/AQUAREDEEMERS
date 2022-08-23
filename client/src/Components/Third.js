@@ -13,7 +13,7 @@ const Third = () => {
       secondary: '#2aa198',
     },
     background: {
-      default: "rgb(33, 34, 73)",
+      default: "rgb(14, 15, 35)",
     },
   }, 'dark');
 

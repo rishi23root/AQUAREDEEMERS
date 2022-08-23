@@ -18,7 +18,7 @@ function Maps  ()  {
             <Map
             mapboxAccessToken='pk.eyJ1Ijoic2lyaW91c2JsYWNrIiwiYSI6ImNsNzR3ZnM4bDB4enEzb21hMzFiZWoya2EifQ.Hwya9NlfnwQDUw2CFMeC2Q'
               style={{
-                 width:"90rem",
+                 width:"150rem",
                  height:"37rem",
                  border:'1px solid black',
               }}

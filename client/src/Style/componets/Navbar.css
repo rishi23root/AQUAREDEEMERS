@@ -10,11 +10,11 @@ h4{
     width: 100%;
     box-shadow: var(--collection-shadow) ;
     padding: 1rem;
-    background-color: rgba(240, 236, 236, 0.43);
+    background-color: rgba(11, 12, 27, 0.23);
     
 }
-Button .button-space{
-    margin-left: 10px;
+Button.button-space{
+    margin-left: 2rem;
     box-shadow: var(--primary-box-shadow);
     color: white;
 }
