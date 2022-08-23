@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const { errorHandler, ErrorConstructor } = require('../middleware/errorHandler')
 const { TokenHandler } = require('../middleware/tokenHandler');
-const DBname = require('../database/init');
-console.log(DBname)
+const { signup, login } = require('../database/utils');
 
+// require('../database/utils');
 // user uui is unique
 
 // database field
@@ -19,18 +19,35 @@ console.log(DBname)
 // login handler
 router.use(TokenHandler)
 
-// router.get('/', (req, res, next) => {
-//     // res.send("this is the way")
-//     next(new ErrorConstructor("This is the way error"))
-//     // next()
-// })
-
 
 // common request for the user and admin 
 router.post('/newLogin', (req, res) => {
-    // wellcome of a new user by creating cookies for that user 
-    res.status(200)
-    res.send('user Veryfied.')
+    // console.log(req.body)
+    if (!req.body.email || !req.body.password) {
+        return res.status(400)
+            .send({
+                message: 'Credentials can not be empty, stop playing around 😐'
+            })
+    }
+    login(req.body.email, req.body.password)
+        .then(user => {
+            res.status(200).send({
+                message: 'Login Successful',
+                user
+            })
+        }).catch(err => {
+            res.status(400).send({
+                message: 'Login Failed',
+                err
+            })
+        }
+        )
+}
+)
+
+// wellcome of a new user by creating cookies for that user 
+res.status(200)
+res.send('user Veryfied.')
 })
 
 router.post('/newEventRequest', (req, res) => {
@@ -56,9 +73,6 @@ router.route('/testing')
     .post()
 // for the repoducing so the token when user activate the login
 
-
-// faculty routes only
-// 1. confirmeby take username and update it in the database
 
 
 
