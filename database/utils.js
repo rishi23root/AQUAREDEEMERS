@@ -5,7 +5,7 @@ console.log(DBname)
 
 const Users = mongoose.model(DBname.user);
 const Test = mongoose.model(DBname.test);
-const filters = mongoose.model(DBname.filters);
+const Filters = mongoose.model(DBname.filters);
 
 // new signup
 function signup(username, userEmail, password, testRequest = NaN, isAdmin = false, isVerified = false, isBlocked = false) {
@@ -57,6 +57,8 @@ function login(userEmail, password) {
     })
 }
 
+
+// work on user 
 function getUserAllData(userId) {
     return new Promise((resolve, reject) => {
         Users.findById(userId)
@@ -101,6 +103,22 @@ function getRecentRequests() {
                 }
             })
     })
+}
+
+
+// fileter compairing from the database
+function getAllFilters() {
+    return new Promise((resolve, reject) => {
+        Filters.findById(userId)
+            .then(user => {
+                if (!user) {
+                    reject("User not found")
+                } else {
+                    resolve(user)
+                }
+            })
+    })
+
 }
 
 
