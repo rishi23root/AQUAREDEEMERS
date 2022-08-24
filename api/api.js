@@ -46,9 +46,9 @@ router.post('/newLogin', (req, res) => {
 )
 
 // wellcome of a new user by creating cookies for that user 
-res.status(200)
-res.send('user Veryfied.')
-})
+// res.status(200)
+// res.send('user Veryfied.')
+// // })
 
 router.post('/newEventRequest', (req, res) => {
     // handle request for the new request from the user

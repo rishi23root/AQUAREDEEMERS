@@ -48,7 +48,7 @@ function login(userEmail, password) {
                     reject("User not found")
                 } else {
                     if (user.password === password) {
-                        resolve({ user._id })
+                        resolve({ user })
                     } else {
                         reject("password not correct")
                     }
