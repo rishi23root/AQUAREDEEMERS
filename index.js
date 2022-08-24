@@ -16,37 +16,37 @@ require('./database/init');
 // ############ middlewares ################
 
 // for prduction and access
-if (process.env.NODE_ENV != 'development')
-    app.use(helmet.contentSecurityPolicy()); // uncomment in final version
-app.use(helmet.crossOriginEmbedderPolicy());
-app.use(helmet.crossOriginOpenerPolicy());
-app.use(helmet.crossOriginResourcePolicy());
-app.use(helmet.dnsPrefetchControl());
-app.use(helmet.expectCt());
-app.use(helmet.frameguard());
-app.use(helmet.hidePoweredBy());
-app.use(helmet.hsts());
-app.use(helmet.ieNoOpen());
-app.use(helmet.noSniff());
-app.use(helmet.originAgentCluster());
-app.use(helmet.permittedCrossDomainPolicies());
-app.use(helmet.referrerPolicy());
-app.use(helmet.xssFilter());
+// if (process.env.NODE_ENV != 'development')
+//     app.use(helmet.contentSecurityPolicy()); // uncomment in final version
+// app.use(helmet.crossOriginEmbedderPolicy());
+// app.use(helmet.crossOriginOpenerPolicy());
+// app.use(helmet.crossOriginResourcePolicy());
+// app.use(helmet.dnsPrefetchControl());
+// app.use(helmet.expectCt());
+// app.use(helmet.frameguard());
+// app.use(helmet.hidePoweredBy());
+// app.use(helmet.hsts());
+// app.use(helmet.ieNoOpen());
+// app.use(helmet.noSniff());
+// app.use(helmet.originAgentCluster());
+// app.use(helmet.permittedCrossDomainPolicies());
+// app.use(helmet.referrerPolicy());
+// app.use(helmet.xssFilter());
 
 app.use(express.json())
 app.use(cookieParser());
 
 
 // set it up for production and development sepereately
-if (process.env.NODE_ENV == 'development'){
-    app.use(cors());
-} else{
-    // production
-    // check if all subdomains are allowed or not
-    app.use(cors({
-        origin: '*.' + process.env.siteURL
-    }));
-}
+// if (process.env.NODE_ENV == 'development'){
+//     app.use(cors());
+// } else{
+//     // production
+//     // check if all subdomains are allowed or not
+//     app.use(cors({
+//         origin: '*.' + process.env.siteURL
+//     }));
+// }
 
 // ############ ############ ################
 
