@@ -4,9 +4,9 @@ import Navbar from '../Components/Navbar';
 import "../Style/pagee/dashboard.css";
 import "../Style/global/variable.css";
 import "../Style/global/commonclasses.css";
-import { Card, CardActionArea, CardContent, Typography } from '@mui/material';
 import Image from "../assets/images/ftir.png" 
 import Waterbodies from '../Components/Waterbodies';
+import DashboardCard from '../Components/DashboardCard';
 
 
 
@@ -85,208 +85,13 @@ const Dashboard = () => {
                 </div>
                 <div className='dashboard-right-side'>
                     <div className='row1'>
-                        <div className='card-component'>
-                            <Typography variant='body1' className='white'>Particles</Typography>
-                            <Card sx={{ maxWidth: 245 }} className="dashboard-card">
-                                <CardActionArea>
-                                    <CardContent >
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                Res
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                4K1920X1080
-                                            </Typography>
-                                        </div>
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                Film
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                500ml
-                                            </Typography>
-                                        </div>
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                thermal
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                4K1920X1080
-                                            </Typography>
-                                        </div>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
-                        </div>
-                        <div className='card-component'>
-                            <Typography variant='body1' className='white'>Particles</Typography>
-                            <Card sx={{ maxWidth: 245 }} className="dashboard-card">
-                                <CardActionArea>
-                                    <CardContent >
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                Res
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                4K1920X1080
-                                            </Typography>
-                                        </div>
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                Film
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                500ml
-                                            </Typography>
-                                        </div>
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                thermal
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                4K1920X1080
-                                            </Typography>
-                                        </div>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
-                        </div>
+                        <DashboardCard/>
                     </div>
                     <div className='row1'>
-                        <div className='card-component'>
-                            <Typography variant='body1' className='white'>Particles</Typography>
-                            <Card sx={{ maxWidth: 245 }} className="dashboard-card">
-                                <CardActionArea>
-                                    <CardContent >
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                Res
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                4K1920X1080
-                                            </Typography>
-                                        </div>
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                Film
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                500ml
-                                            </Typography>
-                                        </div>
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                thermal
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                4K1920X1080
-                                            </Typography>
-                                        </div>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
-                        </div>
-                        <div className='card-component'>
-                            <Typography variant='body1' className='white'>Particles</Typography>
-                            <Card sx={{ maxWidth: 245 }} className="dashboard-card">
-                                <CardActionArea>
-                                    <CardContent >
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                Res
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                4K1920X1080
-                                            </Typography>
-                                        </div>
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                Film
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                500ml
-                                            </Typography>
-                                        </div>
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                thermal
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                4K1920X1080
-                                            </Typography>
-                                        </div>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
-                        </div>
+                        <DashboardCard/>
                     </div>
                     <div className='row1'>
-                        <div className='card-component'>
-                            <Typography variant='body1' className='white'>Particles</Typography>
-                            <Card sx={{ maxWidth: 245 }} className="dashboard-card">
-                                <CardActionArea>
-                                    <CardContent >
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                Res
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                4K1920X1080
-                                            </Typography>
-                                        </div>
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                Film
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                500ml
-                                            </Typography>
-                                        </div>
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                thermal
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                4K1920X1080
-                                            </Typography>
-                                        </div>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
-                        </div>
-                        <div className='card-component'>
-                            <Typography variant='body1' className='white'>Particles</Typography>
-                            <Card sx={{ maxWidth: 245 }} className="dashboard-card">
-                                <CardActionArea>
-                                    <CardContent >
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                Res
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                4K1920X1080
-                                            </Typography>
-                                        </div>
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                Film
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                500ml
-                                            </Typography>
-                                        </div>
-                                        <div className='flex-col'>
-                                            <Typography gutterBottom variant="body2" >
-                                                thermal
-                                            </Typography>
-                                            <Typography gutterBottom variant="body2" >
-                                                4K1920X1080
-                                            </Typography>
-                                        </div>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
-                        </div>
+                        <DashboardCard/>
                     </div>
                 </div>
             </div>
