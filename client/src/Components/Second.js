@@ -3,22 +3,12 @@ import React, { useEffect, useState } from 'react'
 import  axios  from 'axios';
 import DataTable, {createTheme} from "react-data-table-component";
 import "../Style/componets/Waterbodies.css";
+import "../Style/global/commonclasses.css";
 
 
 
 const Second = () => {
-  // const customStyles = {
-  //   rows: {
-  //     style: {
-  //             width: '20vh', // override the row height
-  //            },
-  //         },
-  //   cells: {
-  //     style: {
-  //                 width: '20vh', // override the row height
-  //            },
-  //        },
-  // }
+    
 
     createTheme('solarized', {
         text: {

@@ -30,7 +30,6 @@ function Maps  ()  {
               mapStyle="mapbox://styles/mapbox/dark-v10"
               
             >
-            // with a for loop
             <Marker
               longitude={lng}
               latitude={lat}

@@ -28,7 +28,7 @@ createTheme('solarized', {
   };
   const columns = [
     {
-      name:"Country Rank",
+      name:"Index",
       selector:(row) => row.rank,
        sortable: true
     },
@@ -38,7 +38,7 @@ createTheme('solarized', {
        sortable: true
     },
     {
-      name:"Country Name",
+      name:"State Name",
       selector:(row) => row.region,
       sortable: true
     },
@@ -48,7 +48,7 @@ createTheme('solarized', {
       sortable: true
     },
     {
-      name:"Country flag",
+      name:"Contamination Image",
       selector:(row) =><img width={50} height={50} src={row.flag}/>,
     }
   ]

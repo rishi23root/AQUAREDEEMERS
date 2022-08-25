@@ -1,6 +1,15 @@
-div#small-tab{
-    width: 75vh;
+ div#small-tab{
     margin-top: 2rem;
     margin-bottom: 5rem;
     margin-left: 15rem;
   }
+
+
+  @media only screen and (min-width: 1200px) and (min-width: 1400px) {
+    div#small-tab {
+      width: 40rem;
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+      margin-left: -5rem;
+    }
+}
