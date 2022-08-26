@@ -1,4 +1,5 @@
 const csvtojson = require('csvtojson')
+const fs = require('fs');
 
 const ftirDatasetforCompairing = {}
 const mappingData = {}
@@ -77,6 +78,7 @@ const readFtirMetaData = async (filePath) => {
 
 const ftir_library = './util/ftir_library.csv'
 const ftir_metadata = './util/ftir_metadata.csv'
+const findings = './util/csvjson.json'
 
 function compairvaluePoints(field1, field2) {
     return new Promise((resolve, reject) => {
@@ -111,18 +113,39 @@ function compairvaluePoints(field1, field2) {
 
                 // console.log(globalThresholdSum/field1.length)
                 // console.log(resultDict)
-                
+
                 // find min value and give its index 
                 let min = Math.min(...Object.values(resultDict))
                 let index = Object.keys(resultDict).find(key => resultDict[key] === min)
                 // console.log(resultDict)
-                console.log(index,min)
+                console.log(index, min)
                 console.log(metaData[index.toString()])
                 if (min < threshold) {
                     // console.log('not found')
                     reject(-1)
                 } else {
-                    resolve(metaData[index.toString()])
+                    // load the data from json file and find text in it 
+                    let rawdata = fs.readFileSync(findings);
+                    let data = JSON.parse(rawdata);
+                    // console.log(data);
+
+                    const filterationDataResult = []
+                    // find if spectrum_identity is present in the removal attribute
+                    data.forEach(element => {
+                        // console.log(element.Removal)
+                        if (element.Removal.includes(metaData[index.toString()].spectrum_identity)) {
+                            filterationDataResult.push(element)
+                        }
+                    })
+
+                    resolve({
+                        ...metaData[index.toString()],
+                        filterationMethods:{
+                            ...filterationDataResult,
+                        },
+                        ...ftirData[index.toString()]
+                    })
+
                 }
             })
         })

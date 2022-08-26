@@ -68,13 +68,12 @@ router.post('/newTest', (req, res) => {
     // JSON.parse(str)
     compairvaluePoints(arrfield1, arrfield2)
         .then(valuePoints => {
-            console.log(valuePoints)
+            // console.log(valuePoints)
             res.status(200)
                 .json({
                     message: 'Test Successful',
                     type,
                     valuePoints,
-
                 })
         })
         .catch(err => {
@@ -89,7 +88,7 @@ router.get('/observation', (req, res) => {
     res
     .status(200)
     .json({
-        
+
     })
 })
 
