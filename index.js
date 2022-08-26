@@ -5,6 +5,8 @@ const app = express();
 const cors = require("cors");
 const helmet = require("helmet");
 var cookieParser = require('cookie-parser')
+var bodyParser = require('body-parser')
+
 const { errorHandler, ErrorConstructor } = require('./middleware/errorHandler')
 require('dotenv').config();
 
@@ -35,6 +37,9 @@ require('./database/init');
 
 app.use(express.json())
 app.use(cookieParser());
+
+app.use(bodyParser.urlencoded())
+app.use(bodyParser.json())  
 
 
 // set it up for production and development sepereately

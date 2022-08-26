@@ -8,25 +8,28 @@ const Test = mongoose.model(DBname.test);
 const Filters = mongoose.model(DBname.filters);
 
 // new signup
-function signup(username, userEmail, password, testRequest = NaN, isAdmin = false, isVerified = false, isBlocked = false) {
+function signup(username, useremail, password, testRequest = NaN, isAdmin = false, isVerified = false, isBlocked = false) {
     return new Promise((resolve, reject) => {
         // check if user already exists
-        Users.findOne({ userEmail })
+        Users.findOne({ useremail })
             .then(user => {
                 if (user) {
                     reject("user already exists")
                 } else {
                     // create new user
                     const newUser = new Users({
+                        _id: mongoose.Types.ObjectId(),
                         username,
+                        useremail,
                         password,
                         testRequest,
                         isAdmin,
                         isVerified,
                         isBlocked
                     })
-                    user.save((err, user) => {
+                    newUser.save((err, user) => {
                         if (err) {
+                            console.log(err)
                             reject(err)
                         } else {
                             resolve(user)
@@ -56,7 +59,6 @@ function login(userEmail, password) {
             })
     })
 }
-
 
 // work on user 
 function getUserAllData(userId) {
@@ -105,7 +107,6 @@ function getRecentRequests() {
     })
 }
 
-
 // fileter compairing from the database
 function getAllFilters() {
     return new Promise((resolve, reject) => {
@@ -120,7 +121,6 @@ function getAllFilters() {
     })
 
 }
-
 
 module.exports = {
     signup,

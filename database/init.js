@@ -116,15 +116,16 @@ const filtersSchema = mongoose.Schema({
 }, { timestamps: true })
 
 
+// useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true 
 // connect to the database
 const connectionParams = {
     useNewUrlParser: true,
     useNewUrlParser: true,
-    // useUnifiedTopology: true,
+    useUnifiedTopology: true,
     // useFindAndModify: false
 };
 
-const ConnectionURI = `mongodb+srv://${process.env.DBURIANDPASS}@rishabhdatabase-7ayur.mongodb.net/${process.env.DBName}?authSource=admin&replicaSet=rishabhDatabase-shard-0&w=maj&readPreference=primary&retryWrites=true&ssl=true`
+const ConnectionURI = `mongodb+srv://${process.env.DBURIANDPASS}@rishabhdatabase-7ayur.mongodb.net/${process.env.DBName}?authSource=admin&replicaSet=rishabhDatabase-shard-0&ssl=true`
 // `mongodb+srv://${process.env.DBURIANDPASS}-7ayur.mongodb.net/socialHACK?retryWrites=true&w=majority`
 
 mongoose.connect(ConnectionURI, connectionParams)
