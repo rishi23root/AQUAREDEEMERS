@@ -4,22 +4,22 @@ import Home from "../Pages/Home"
 import "../Style/global/commonclasses.css"
 
 
-import { Button, Link} from '@mui/material';
+import { Button, Link } from '@mui/material';
 
 
 
-const Navbar= () => {
-  return (
-    <div className='top-navbar container'>
-        <div className='logoname absolute-center cur-po' src={Home}> 
-            <h4> AQUAREDEEMERS</h4>
+const Navbar = () => {
+    return (
+        <div className='top-navbar container'>
+            <div className='logoname absolute-center cur-po' src={Home}>
+                <Link href={"/"} variant="h6" style={{ color: "white", textDecoration: 'none' }}>AQUAREDEEMERS</Link>
+            </div>
+            <div className='cur-po absolute-center space-button '>
+                <Link href={"../dashboard"} style={{ color: "white" }}>DASHBOARD</Link>
+                <Button src="../../login" className='button-space' style={{ color: "white", textDecoration: 'none' }} >Logout | Signup</Button>
+            </div>
+
         </div>
-        <div className='cur-po absolute-center space-button '>
-            <Link href={"../dashboard"}  style={{color:"white"}}>DASHBOARD</Link>
-            <Button src="../../login"  className='button-space' style={{color:"white"}} >Logout | Signup</Button>
-        </div>
-
-    </div>
     )
 }
 

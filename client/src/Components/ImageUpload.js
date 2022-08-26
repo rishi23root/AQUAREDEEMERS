@@ -9,7 +9,7 @@ class ImageUpload extends React.Component {
         imagesPreviewUrls: []
     };
 
-    _handleImageChange = e =>{
+    _handleImageChange = e => {
         e.preventDefault();
 
         // FileList to Array
@@ -31,16 +31,16 @@ class ImageUpload extends React.Component {
     }
 
     render() {
-        let {imagesPreviewUrls} = this.state;
+        let { imagesPreviewUrls } = this.state;
 
         return (
             <div id="">
                 <label className="btn btn-default btn-lg z-depth-0 mr-0 pl-2 pr-2 custom-file-upload waves-effect waves-light" htmlFor="file">
                     <i className="fas fa-image fa-fw" aria-hidden="true"></i>
-                    <input className="upload" type="file" onChange={this._handleImageChange} multiple/>
+                    <input type="file" onChange={this._handleImageChange} multiple />
                 </label>
-                {imagesPreviewUrls.map(function(imagePreviewUrl, i){
-                    return <img key={i} src={imagePreviewUrl} className="image-pre"/>
+                {imagesPreviewUrls.map(function (imagePreviewUrl, i) {
+                    return <img key={i} src={imagePreviewUrl} className="image-pre" />
                 })}
             </div>
         )
