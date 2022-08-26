@@ -2,9 +2,10 @@ const router = require("express").Router();
 const { errorHandler, ErrorConstructor } = require('../middleware/errorHandler')
 const { TokenHandler } = require('../middleware/tokenHandler');
 const { signup, login } = require('../database/utils');
-const { ftirDatasetforCompairing, mappingData } = require('../util/indexing')
+const { ftirDatasetforCompairing, mappingData, compairvaluePoints } = require('../util/indexing')
+// const { compairvaluePoints } = require('../util/utils')
 
-console.log(ftirDatasetforCompairing)
+// console.log(ftirDatasetforCompairing)
 // router.use(TokenHandler)
 
 
@@ -61,12 +62,35 @@ router.post('/newRegister', (req, res) => {
 })
 
 router.post('/newTest', (req, res) => {
-    const { type, field1, field2 } = req.body ;
+    const { type, field1, field2 } = req.body;
+    const arrfield1 = JSON.parse(field1)
+    const arrfield2 = JSON.parse(field2)
+    // JSON.parse(str)
+    compairvaluePoints(arrfield1, arrfield2)
+        .then(valuePoints => {
+            console.log(valuePoints)
+            res.status(200)
+                .json({
+                    message: 'Test Successful',
+                    type,
+                    valuePoints,
 
-    res.status(200)
-        .json({
-            message: 'Test Successful'
+                })
         })
+        .catch(err => {
+            res.status(400)
+                .json({
+                    message: 'Test Failed not found'
+                })
+        })
+})
+
+router.get('/observation', (req, res) => {
+    res
+    .status(200)
+    .json({
+        
+    })
 })
 
 
