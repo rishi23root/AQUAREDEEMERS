@@ -84,14 +84,13 @@ router.post('/newTest', (req, res) => {
         })
 })
 
-router.get('/observation', (req, res) => {
-    res
-    .status(200)
-    .json({
+// router.get('/observation', (req, res) => {
+//     res
+//     .status(200)
+//     .json({
 
-    })
-})
-
+//     })
+// })
 
 // FINAl error handle 
 router.get('/*', (req, res, next) => {
