@@ -84,13 +84,68 @@ router.post('/newTest', (req, res) => {
         })
 })
 
-// router.get('/observation', (req, res) => {
-//     res
-//     .status(200)
-//     .json({
-
-//     })
-// })
+router.get('/observation', (req, res) => {
+    res
+        .status(200)
+        .json({
+            "data": [
+                {
+                    "id": "1",
+                    "rank": "125664",
+                    "location": "Rajasthan",
+                    "area": "North rajasthan",
+                    "contamination": "Nitrate,Pathogenic,Bactria",
+                    "major_contamination": "Flourine",
+                    "improvement": "9175",
+                    "tags": "SE454545",
+                    "quantity": "245"
+                },
+                {
+                    "id": "2",
+                    "rank": "2625",
+                    "location": "West bengal",
+                    "area": "east side of bhagirathi",
+                    "contamination": "inorganic compound",
+                    "major_contamination": "Arsenic",
+                    "improvement": "9175",
+                    "tags": "SE454545",
+                    "quantity": "245"
+                },
+                {
+                    "id": "3",
+                    "rank": "14235",
+                    "location": "Karnataka",
+                    "area": "Mangular greenstone belt ",
+                    "contamination": "Heavy metal",
+                    "major_contamination": "Cadmium",
+                    "improvement": "9175",
+                    "tags": "SE454545",
+                    "quantity": "245"
+                },
+                {
+                    "id": "4",
+                    "rank": "1821",
+                    "location": "Assam",
+                    "area": "Guwahati",
+                    "contamination": "Backetria, virus, PE , Inorganic compounds ",
+                    "major_contamination": "Polyethylene,arsenic",
+                    "improvement": "9175",
+                    "tags": "SE454545",
+                    "quantity": "245"
+                },
+                {
+                    "id": "5",
+                    "rank": "11267",
+                    "location": "Delhi",
+                    "area": "Yamubna ,River",
+                    "contamination": "Polystyrine",
+                    "major_contamination": "Murcury",
+                    "improvement": "9175",
+                    "tags": "SE454545",
+                    "quantity": "245"
+                }]
+        })
+})
 
 // FINAl error handle 
 router.get('/*', (req, res, next) => {
