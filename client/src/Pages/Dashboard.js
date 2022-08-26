@@ -52,11 +52,11 @@ const Dashboard = () => {
                                 />
                             </Box>
                             <Box sx={{ mb: 2 }}>
-                                {/*<CsvFile
-                                className=" dashboard-image"
-  />*/}
+                                <CsvFile
+                                    className=" dashboard-image"
+                                />
                             </Box>
-                            <Button variant='outlined' > Evaluate</Button>
+
                             {/*<img src={Image} className=" dashboard-image"/>*/}
                         </div>
                         <div>
@@ -128,7 +128,9 @@ const Dashboard = () => {
                         </div>
                     </div>
                     <div className='right-side-col vertical-align'>
-                        <Link style={{ color: "white" }} to="/Dashboard1" sx={{ mb: 3 }} className='button-right-side cur-po' >Previous Data</Link>
+                        <div className='btn-ali absolute-center'>
+                            <Link style={{ borderRadius: "3rem", color: "white", textDecoration: 'none', border: "1px solid white", width: "8rem", padding: "8px", justifyContent:"center" }} href={"../dashboard1"} sx={{ mb: 3 }} className='button-right-side cur-po btn-size' >Previous Data</Link>
+                        </div>
                         <div className='dashboard-right-side'>
 
                             <div className='row1'>

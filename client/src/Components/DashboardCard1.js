@@ -4,11 +4,11 @@ import { Card, CardActionArea, CardContent, Typography } from '@mui/material';
 
 
 const DashboardCard1 = () => {
-  return (
-    <>
-                <div className='card-component'>
+    return (
+        <>
+            <div className='card-component'>
                 <Typography variant='body1' className='white'>Identification </Typography>
-                <Card sx={{ maxWidth: 245 }} className="dashboard-card">
+                <Card style={{ background: "#282C35", color: "white", }} sx={{ maxWidth: 245, boxShadow: 5 }} className="dashboard-card">
                     <CardActionArea>
                         <CardContent >
                             <div className='flex-col'>
@@ -16,9 +16,9 @@ const DashboardCard1 = () => {
                                     List of particle
                                 </Typography>
                                 <Typography gutterBottom variant="body2" >
-                                   <b> PVC,PA,
-                                    <br></br>
-                                    PMC,PMMA</b>
+                                    <b> PVC,PA,
+                                        <br></br>
+                                        PMC,PMMA</b>
                                 </Typography>
                             </div>
                         </CardContent>
@@ -27,7 +27,7 @@ const DashboardCard1 = () => {
             </div>
             <div className='card-component'>
                 <Typography variant='body1' className='white'>Removal</Typography>
-                <Card sx={{ maxWidth: 245 }} className="dashboard-card">
+                <Card style={{ background: "#282C35", color: "white", }} sx={{ maxWidth: 245, boxShadow: 5 }} className="dashboard-card">
                     <CardActionArea>
                         <CardContent >
                             <div className='flex-col'>
@@ -74,7 +74,7 @@ const DashboardCard1 = () => {
                     </CardActionArea>
                 </Card>
             </div>
-            </> 
+        </>
     )
 }
 
