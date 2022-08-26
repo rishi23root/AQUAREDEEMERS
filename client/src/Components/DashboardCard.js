@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { Card, CardActionArea, CardContent, Typography } from '@mui/material'
 
+
+
+
 function DashboardCard() {
   const [value, setValue] = useState('')
   // const [value, setValue] = useState('');
@@ -20,7 +23,7 @@ function DashboardCard() {
         <Typography variant="body1" className="white">
           Particles
         </Typography>
-        <Card sx={{ maxWidth: 245 }} className="dashboard-card">
+        <Card style={{ background: "#282C35", color: "white", }} sx={{ maxWidth: 245, boxShadow: 5 }} className="dashboard-card">
           <CardActionArea>
             <CardContent>
               <div className="flex-col">
@@ -63,7 +66,7 @@ function DashboardCard() {
         <Typography variant="body1" className="white">
           Statistic
         </Typography>
-        <Card sx={{ maxWidth: 245 }} className="dashboard-card">
+        <Card style={{ background: "#282C35", color: "white", }} sx={{ maxWidth: 245, boxShadow: 5 }} className="dashboard-card">
           <CardActionArea>
             <CardContent>
               <div className="flex-col">

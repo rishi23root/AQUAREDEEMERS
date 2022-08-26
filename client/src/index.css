@@ -7,6 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(27,28,55);
 }
+.btn .btn-default .btn-lg .z-depth-0 .mr-0 .pl-2 .pr-2 .custom-file-upload .waves-effect .waves-light{
+  background: green;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

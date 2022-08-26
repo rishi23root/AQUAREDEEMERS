@@ -2,10 +2,10 @@
     {   
         "id":"1",
         "rank":"125664",
-        "location":"total water bodies",
-        "area":"mumbai",
-        "contamination":"active",
-        "major_contamination":"Bravo",
+        "location":"Rajasthan",
+        "area":"North rajasthan",
+        "contamination":"Nitrate,Pathogenic,Bactria",
+        "major_contamination":"Flourine",
         "improvement":"9175",
         "tags":"SE454545",
         "quantity":"245"
@@ -13,10 +13,10 @@
     {   
         "id":"2",
         "rank":"2625",
-        "location":"total water bodies",
-        "area":"mumbai",
-        "contamination":"active",
-        "major_contamination":"Bravo",
+        "location":"West bengal",
+        "area":"east side of bhagirathi",
+        "contamination":"inorganic compound",
+        "major_contamination":"Arsenic",
         "improvement":"9175",
         "tags":"SE454545",
         "quantity":"245"
@@ -24,10 +24,10 @@
     {   
         "id":"3",
         "rank":"14235",
-        "location":"total water bodies",
-        "area":"mumbai",
-        "contamination":"active",
-        "major_contamination":"Bravo",
+        "location":"Karnataka",
+        "area":"Mangular greenstone belt ",
+        "contamination":"Heavy metal",
+        "major_contamination":"Cadmium",
         "improvement":"9175",
         "tags":"SE454545",
         "quantity":"245"
@@ -35,10 +35,10 @@
     {   
         "id":"4",
         "rank":"1821",
-        "location":"total water bodies",
-        "area":"mumbai",
-        "contamination":"active",
-        "major_contamination":"Bravo",
+        "location":"Assam",
+        "area":"Guwahati",
+        "contamination":"Backetria, virus, PE , Inorganic compounds ",
+        "major_contamination":"Polyethylene,arsenic",
         "improvement":"9175",
         "tags":"SE454545",
         "quantity":"245"
@@ -46,10 +46,10 @@
     {   
         "id":"5",
         "rank":"11267",
-        "location":"total water bodies",
-        "area":"mumbai",
-        "contamination":"active",
-        "major_contamination":"Bravo",
+        "location":"Delhi",
+        "area":"Yamubna ,River",
+        "contamination":"Polystyrine",
+        "major_contamination":"Murcury",
         "improvement":"9175",
         "tags":"SE454545",
         "quantity":"245"

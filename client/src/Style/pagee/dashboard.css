@@ -25,7 +25,13 @@
     background-color: rgba(42, 45, 90, 0.742);
     width: 37rem;
 }
-
+.btn-ali{
+    align-items: center;
+    justify-content: center;
+}
+.button-right-side.cur-po .btn-size{
+   
+}
 .dashboard-right-side{
     height: 80%;
     border: 1px solid white;
