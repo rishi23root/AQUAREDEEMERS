@@ -11,7 +11,7 @@ const Statistic = () => {
   return (
     <div className='middlePart'>
       <div className='Statistic-leftSide'>
-          <div className='app-container'>
+          <div className='app-container '>
               <Second/>
               <Third/>
           </div>       

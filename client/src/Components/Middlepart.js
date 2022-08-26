@@ -16,7 +16,7 @@ const Middlepart = () => {
               <Waterbodies/>
             </Box>
           <hr></hr>
-          <Box className='absolute-center' sx={{mb:5}}>
+          <Box className='absolute-center' sx={{mb:5, mt:5}}>
           <Statistic/>
         </Box>
           
