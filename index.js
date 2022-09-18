@@ -1,6 +1,6 @@
 const express = require('express');
-const path = require ("path")
-const fs = require ("fs")
+const path = require("path")
+const fs = require("fs")
 const app = express();
 const cors = require("cors");
 const helmet = require("helmet");
@@ -9,12 +9,16 @@ var bodyParser = require('body-parser')
 
 const { errorHandler, ErrorConstructor } = require('./middleware/errorHandler')
 require('dotenv').config();
-
-const port = process.env.PORT || 3000;
-
 //database connection
 require('./database/init');
 
+const port = process.env.PORT || 3001;
+
+app.use(cors({
+    origin: '*',
+    credentials: true,
+
+}));
 // ############ middlewares ################
 
 // for prduction and access
@@ -38,8 +42,8 @@ require('./database/init');
 app.use(express.json())
 app.use(cookieParser());
 
-app.use(bodyParser.urlencoded())
-app.use(bodyParser.json())  
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 
 
 // set it up for production and development sepereately
@@ -77,7 +81,7 @@ if (process.env.NODE_ENV == "production") {
     app.get("/*", (req, res) => {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
     })
-}else{
+} else {
     app.get("/*", (req, res) => {
         res.send(
             "server in developer mode run react on seperately"

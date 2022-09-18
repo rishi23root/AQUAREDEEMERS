@@ -9,7 +9,7 @@ import Waterbodies from '../Components/Waterbodies';
 import DashboardCard from '../Components/DashboardCard';
 import DashboardCard1 from '../Components/DashboardCard1';
 import ImageUpload from "../Components/ImageUpload";
-import { Box,  Link } from '@mui/material';
+import { Box, Link } from '@mui/material';
 import CsvFile from "../Components/CsvFile";
 
 
@@ -44,8 +44,14 @@ const Dashboard = () => {
                 <div className='dashboard-container absolute-center'>
                     <div className='dashboard-left-side  '>
                         <div className=' image-alignment absolute-centre white'>
-                            <label className="cur-po space-checkbox"><input type="checkbox" value={FTIR} on change={() => handleChange("FTIR")} />FTIR</label>
-                            <label className="cur-po"><input type="checkbox" value={RamanSpectroScopy} on change={() => handleChange("RamanSpectroScopy")} />RamanSpectroScopy</label>
+                            <label className="cur-po space-checkbox">
+                                <input type="checkbox" value={FTIR} on change={() => handleChange("FTIR")} />
+                                FTIR
+                            </label>
+                            <label className="cur-po">
+                                <input type="checkbox" value={RamanSpectroScopy} onChange={() => handleChange("RamanSpectroScopy")} />
+                                RamanSpectroScopy
+                            </label>
                             <Box sx={{ mb: 2 }}>
                                 <ImageUpload
                                     className=" dashboard-image"

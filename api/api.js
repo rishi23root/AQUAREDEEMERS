@@ -11,7 +11,7 @@ const { ftirDatasetforCompairing, mappingData, compairvaluePoints } = require('.
 
 // common request for the user and admin 
 router.post('/newLogin', (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
 
     if (!req.body.email || !req.body.password) {
         return res.status(400)
@@ -37,7 +37,7 @@ router.post('/newLogin', (req, res) => {
 
 router.post('/newRegister', (req, res) => {
     const { email, password, username } = req.body
-    console.log(req.body)
+    // console.log(req.body)
 
     if (!email || !password) {
         return res.status(400)
@@ -52,7 +52,7 @@ router.post('/newRegister', (req, res) => {
                 user
             })
         }).catch(err => {
-            console.log(err)
+            // console.log(err)
             res.status(400).send({
                 message: 'Register Failed',
                 err

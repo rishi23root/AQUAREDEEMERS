@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const DBname = require('../database/init');
-console.log(DBname)
+// console.log(DBname)
 
 
 const Users = mongoose.model(DBname.user);
