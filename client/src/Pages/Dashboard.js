@@ -9,7 +9,7 @@ import Waterbodies from '../Components/Waterbodies';
 import DashboardCard from '../Components/DashboardCard';
 import DashboardCard1 from '../Components/DashboardCard1';
 import ImageUpload from "../Components/ImageUpload";
-import { Box, Button, Link } from '@mui/material';
+import { Box,  Link } from '@mui/material';
 import CsvFile from "../Components/CsvFile";
 
 
@@ -19,18 +19,18 @@ const Dashboard = () => {
     const [RamanSpectroScopy, setRamanSpectroScopy] = useState(true);
 
     const handleChange = (data) => {
-        if (data == "FTIR") {
-            if (FTIR == true) {
+        if (data === "FTIR") {
+            if (FTIR === true) {
                 console.log(data, "our value")
             }
             setFTIR(!FTIR)
         }
-        if (data == "RamanSpectroScopy") {
-            {
-                if (RamanSpectroScopy == true) {
-                    console.log(data, "our value")
-                }
-            }
+        if (data === "RamanSpectroScopy") {
+            // {
+            //     if (RamanSpectroScopy === true) {
+            //         console.log(data, "our value")
+            //     }
+            // }
             setRamanSpectroScopy(!RamanSpectroScopy)
         }
     }
@@ -129,7 +129,13 @@ const Dashboard = () => {
                     </div>
                     <div className='right-side-col vertical-align'>
                         <div className='btn-ali absolute-center'>
-                            <Link style={{ borderRadius: "3rem", color: "white", textDecoration: 'none', border: "1px solid white", width: "8rem", padding: "8px", justifyContent:"center" }} href={"../dashboard1"} sx={{ mb: 3 }} className='button-right-side cur-po btn-size' >Previous Data</Link>
+                            <Link
+                                style={{ borderRadius: "3rem", color: "white", textDecoration: 'none', border: "1px solid white", width: "8rem", padding: "8px", justifyContent: "center" }}
+                                href={"../dashboard1"}
+                                sx={{ mb: 3 }}
+                                className='button-right-side cur-po btn-size' >
+                                Previous Data
+                            </Link>
                         </div>
                         <div className='dashboard-right-side'>
 

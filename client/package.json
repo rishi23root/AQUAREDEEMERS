@@ -2,7 +2,7 @@
   "name": "aquaredeemers",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "./",
   "start_url": "/",
   "dependencies": {
     "@emotion/react": "^11.10.0",

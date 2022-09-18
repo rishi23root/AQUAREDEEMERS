@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Suspense } from 'react'
 
-import  axios  from 'axios';
-import DataTable, { createTheme }  from "react-data-table-component";
+import axios from 'axios';
+import DataTable, { createTheme } from "react-data-table-component";
 import "../Style/componets/Waterbodies.css";
 
-
-
 const Waterbodies = () => {
-createTheme('solarized', {
+  createTheme('solarized', {
     text: {
       primary: '#FFFFFF',
       secondary: '#2aa198',
@@ -17,64 +15,68 @@ createTheme('solarized', {
     },
   }, 'dark');
 
-  const [countries,setCountries]= useState([0]);
+  const [countries, setCountries] = useState([]);
+
   const getCountries = async () => {
-      try{
-        const response = await axios.get('https://restcountries.com/v3.1/all')
-        setCountries(response.data);
-      }catch(error){
-        console.log(error);
-      }
-  };
+    return axios({
+      method: 'get',
+      url: `http://localhost:3001/api/observation`,
+      withCredentials: false,
+    }).then((response) => response.data.data)
+      .catch((error) => console.warn(error));
+  }
+  // area,contamination,id,improvement,location,major_contamination,quantity,rank,tags
+
   const columns = [
     {
-      name:"Index",
-      selector:(row) => row.rank,
-       sortable: true
-    },
-    {
-      name:"name",
-      selector:(row) => row.nativeName,
-       sortable: true
-    },
-    {
-      name:"State Name",
-      selector:(row) => row.region,
+      name: "Index",
+      selector: (row) => row.id,
       sortable: true
     },
     {
-      name:"Area name",
-      selector:(row) => row.capital,
+      name: "city",
+      selector: (row) => row.location,
       sortable: true
     },
     {
-      name:"Contamination Image",
-      selector:(row) =><img width={50} height={50} src={row.flag}/>,
-    }
+      name: "Area Name",
+      selector: (row) => row.area,
+      sortable: true
+    },
+    {
+      name: "major contamination",
+      selector: (row) => row.major_contamination,
+      sortable: true
+    },
+    {
+      name: "contamination",
+      selector: (row) => row.contamination,
+      sortable: true
+    },
   ]
 
   useEffect(() => {
-    getCountries();
-  },[]);
+    getCountries().then((data) => {
+      setCountries(data);
+    })
+  }, []);
 
   return (
     <div id="tab">
-      <DataTable 
-      title="Area Stats" 
-      columns={columns} 
-      data={countries} 
-       pagination
-      fixedHeader
-      fixedHeaderScrollHeight='400px'
-      highlightOnHover
-      actions={
-        <button className='btn btn-info'>Export</button>}
-      theme="solarized"
-        />
+      <DataTable
+        title="Area Stats"
+        columns={columns}
+        data={countries}
+        pagination
+        fixedHeader
+        fixedHeaderScrollHeight='400px'
+        highlightOnHover
+        actions={
+          <button className='btn btn-info'>Export</button>}
+        theme="solarized"
+      />
     </div>
   )
 }
 
 export default Waterbodies;
-
-

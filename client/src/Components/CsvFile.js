@@ -36,6 +36,8 @@ export default function CsvFile(){
         }
 
         reader.readAsText(file);
+
+        // 
     }
 
     return(
