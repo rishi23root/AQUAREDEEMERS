@@ -61,8 +61,10 @@ router.post('/newRegister', (req, res) => {
         )
 })
 
-router.post('/newTest', (req, res) => {
+router.post('/newTest', async (req, res) => {
+    // console.log(req.body)
     const { type, field1, field2 } = req.body;
+    // console.log(typeof field1)
     const arrfield1 = JSON.parse(field1)
     const arrfield2 = JSON.parse(field2)
     // JSON.parse(str)

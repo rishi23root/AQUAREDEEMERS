@@ -4,6 +4,11 @@
     align-items: center;
 }
 
+.atag{
+    text-decoration: none;
+    color: rgb(114, 180, 255);
+}
+
 .cur-po{
     cursor: pointer;
 }

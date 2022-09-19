@@ -40,7 +40,7 @@ class ImageUpload extends React.Component {
                     <input type="file" onChange={this._handleImageChange} multiple />
                 </label>
                 {imagesPreviewUrls.map(function (imagePreviewUrl, i) {
-                    return <img key={i} src={imagePreviewUrl} className="image-pre" />
+                    return <img key={i} src={imagePreviewUrl} className="image-pre" alt='imageItself' />
                 })}
             </div>
         )

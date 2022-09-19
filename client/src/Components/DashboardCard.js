@@ -4,19 +4,7 @@ import { Card, CardActionArea, CardContent, Typography } from '@mui/material'
 
 
 
-function DashboardCard() {
-  const [value, setValue] = useState('')
-  // const [value, setValue] = useState('');
-  // const [value, setValue] = useState('');
-  // const [value, setValue] = useState('');
-  // const [value, setValue] = useState('');
-  // const [value, setValue] = useState('');
-  // const [value, setValue] = useState('');
-  // const [value, setValue] = useState('');
-  // const [value, setValue] = useState('');
-  // const [value, setValue] = useState('');
-  // const [value, setValue] = useState('');
-
+function DashboardCard({requestResults}) {
   return (
     <>
       <div className="card-component">
@@ -31,33 +19,37 @@ function DashboardCard() {
                   contamination
                 </Typography>
                 <Typography gutterBottom variant="body2">
-                  <b> {value}</b>
+                  <b> {requestResults.requestCompleted ? requestResults.contamination : '- -'}</b>
                 </Typography>
               </div>
+
               <div className="flex-col">
                 <Typography gutterBottom variant="body2">
                   Size
                 </Typography>
                 <Typography gutterBottom variant="body2">
-                  <b> {value}</b>
+                  <b> {requestResults.requestCompleted ? requestResults.Size : '- -' }</b>
                 </Typography>
               </div>
+
               <div className="flex-col">
                 <Typography gutterBottom variant="body2">
                   Quality
                 </Typography>
                 <Typography gutterBottom variant="body2">
-                  <b>{value}</b>
+                  <b>{requestResults.requestCompleted ? requestResults.Quality : '- -'}</b>
                 </Typography>
               </div>
+
               <div className="flex-col">
                 <Typography gutterBottom variant="body2">
                   Shape
                 </Typography>
                 <Typography gutterBottom variant="body2">
-                  <b> {value}</b>
+                  <b> {requestResults.requestCompleted ? requestResults.Shape : '- -'}</b>
                 </Typography>
               </div>
+              
             </CardContent>
           </CardActionArea>
         </Card>
@@ -74,7 +66,7 @@ function DashboardCard() {
                   Sample Volume
                 </Typography>
                 <Typography gutterBottom variant="body2">
-                  <b>{value}</b>
+                  <b>{requestResults.requestCompleted ? requestResults.SampleVolume : '- -'}</b>
                 </Typography>
               </div>
               <div className="flex-col">
@@ -82,7 +74,7 @@ function DashboardCard() {
                   Number of particle
                 </Typography>
                 <Typography gutterBottom variant="body2">
-                  <b> {value}</b>
+                  <b> {requestResults.requestCompleted ? requestResults.NumberOfParticle : '- -'}</b>
                 </Typography>
               </div>
               <div className="flex-col">
@@ -90,7 +82,7 @@ function DashboardCard() {
                   Most Abundant Particel
                 </Typography>
                 <Typography gutterBottom variant="body2">
-                  <b> {value}</b>
+                  <b> {requestResults.requestCompleted ? requestResults.MostAbundantParticle : '- -'}</b>
                 </Typography>
               </div>
               <div className="flex-col">
@@ -98,7 +90,7 @@ function DashboardCard() {
                   Contamination Band
                 </Typography>
                 <Typography gutterBottom variant="body2">
-                  <b>{value}</b>
+                  <b>{requestResults.requestCompleted ? requestResults.ContaminationBand : '- -'}</b>
                 </Typography>
               </div>
             </CardContent>
